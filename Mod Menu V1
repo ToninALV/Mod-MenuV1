@@ -1,0 +1,136 @@
+from time import sleep
+import webbrowser
+import sys
+import os
+
+print(""" 
+
+      \033[35mMOD MENU
+         V1
+       PYTHON\033[0m
+""")
+while True:
+    print(""" 
+  \033[1;34m
+[1] Softwares de Trabalho
+[2] Bater Ponto
+[3] Padrões de Atendimentos
+[4] Contato dos Técnicos
+[5] Planilhas (ROT, ESCALA...)
+[6] WIKI
+[7] Sites para Trabalho
+[8] Outros Setores
+[9] Sair do Programa
+  \033[0m
+  """)
+
+    option = int(input('\033[92mDigite o valor referente a opção que você deseja: '))
+
+    if option == 1:
+        print('')
+        print('\033[93mSoftwares de Trabalho')
+        while True:
+            print("""\033[91m
+[1] WinBox
+[2] The Dude
+[3] UNM
+[4] Notepad
+[5] CMD
+[6] Voltar ao Menu Inicial
+
+      """)
+            option = int(input('\033[92mDigite o valor da opção do sub-menu: \033[0m'))
+
+            if option == 1:
+                print('[91mAbrindo o WINBOX...')
+                sleep(0.5)
+                os.startfile("")
+            if option == 4:
+                print('[91mAbrindo Notepad...')
+                sleep(0.5)
+                os.startfile("Notepad.exe")
+            if option == 5:
+                print('[91mAbrindo CMD...')
+                sleep(0.5)
+                os.startfile("cmd.exe")
+
+            if option == 6:
+                break
+
+    elif option == 2:
+        print('\033[93mVocê escolheu a opção de Bater Ponto')
+        print('\033[91mAbrindo Tangerino...\033[0m')
+        sleep(1)
+        webbrowser.open_new_tab('https://app.tangerino.com.br/Tangerino/pages/baterPonto/?_ga=2.177181541.1714323212.1616620239-873285803.1616620239')
+    elif option == 3: #Menu Principal
+        while True:
+            print('')
+            print('\033[1;97mPADRÕES DE ATENDIMENTOS\033[0m')
+            print("""\033[91m
+[1] Padrões de Atendimentos
+[2] Fluxogramas de Atendimentos (MIRO)
+[3] Voltar ao menu inicial
+      """)
+            option = int(input('\033[92mDigite o valor da opção do sub-menu: \033[0m'))
+            if option == 1:
+                print('\033[93mRedirecionando...\033[0m')
+                webbrowser.open_new_tab('https://docs.google.com/document/d/10eHZf_BZk223XuUWseMnpmAXwVT8tcvRdTxq7-zit-Q/edit')
+                sleep(0.5)
+            elif option == 2:
+                print('Redirecionando...')
+                sleep(0.5)
+            elif option == 3:
+                break
+    elif option == 4:
+        print('')
+        print('\033[1;93mSegue Abaixo o Contato de todos os técnicos...')
+        print("""         
+\033[1;97m       
+● Alexsander ---- 9 9517-5823
+● Antonio ------- 9 9227-4296
+● Cristiano ----- 9 9929-7221
+● Fabio --------- 9 9562-0633
+● Gesiel -------- 9 9512-9145
+● Gleison ------- 9 9895-7778
+● Guilherme ----- 9 9581-5977
+● Jardel -------- 9 7102-6311
+● Leandro ------- 9 7555-0053
+● Luiz ---------- 9 9790-9195
+● Marciano ------ 9 9856-3139
+● Mário --------- 9 7143-8539
+● Mateus -------- 9 9798-8469
+● Natanael ------ 9 9927-9783
+● Pablo --------- 9 9514-0951
+● Paulo --------- 9 9835-1317
+● Rafael Fraga -- 9 7110-9506
+● Ramon --------- 9 9741-8039
+● Romário ------- 9 7152-8336
+\033[0m""")
+        print("""\033[33m
+[1] Menu Inicial
+[2] Sair do Programa\033[0m""")
+        print('')
+        option = int(input('\033[92mDigite o valor correspondente a opção que deseja: '))
+        if option == 1:
+            print('\033[91mVoltando...')
+            sleep(0.3)
+        elif option == 2:
+            break
+
+
+
+    elif option == 9:
+        break
+
+    else:
+        print('')
+        print('\033[91mOpção inválida, Tente Novamente!!!\033[0m')
+
+
+
+
+
+
+
+else:
+    print('\033[91mOpção Inválida, Tente novamente!!!\033[0m')
