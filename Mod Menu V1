@@ -5,15 +5,13 @@ import os
 
 
 
-print(""" 
-
-      \033[35mMOD MENU
-         V1
-       PYTHON\033[0m
-""")
 while True:
     print(""" 
-  \033[1;34m
+
+  PyNu v1 (Windows)
+        
+    """)
+    print(""" 
 [1] Softwares de Trabalho
 [2] Bater Ponto
 [3] Padrões de Atendimentos
@@ -24,16 +22,17 @@ while True:
 [8] Sites para Trabalho
 [9] Outros Setores
 [10] Sair do Programa
-  \033[0m
   """)
+    print('')
 
-    option = int(input('\033[92mDigite o valor referente a opção que você deseja: '))
+    option = int(input('Digite o valor referente a opção que você deseja: '))
+    os.system("cls") or None
 
-    if option == 1: #menu inicial
-        print('')
-        print('\033[93mSoftwares de Trabalho')
-        while True:
-            print("""\033[91m
+    if option == 1:
+        while True:#menu inicial
+            print('')
+            print('Softwares de Trabalho')
+            print("""
 [1] WinBox
 [2] The Dude
 [3] UNM
@@ -42,61 +41,72 @@ while True:
 [6] Voltar ao Menu Inicial
 
       """)
-            option = int(input('\033[92mDigite o valor da opção do sub-menu: \033[0m'))
+            option = int(input('Digite o valor da opção do sub-menu: '))
 
             if option == 1:
-                print('\033[91mAbrindo o WINBOX...')
+                print('Abrindo o WINBOX...')
                 sleep(0.5)
                 os.startfile("")
+                os.system("cls") or None
             if option == 2:
-                print('\033[91mAbrindo The Dude...')
+                print('Abrindo The Dude...')
                 sleep(0.5)
                 os.startfile("C:\Program Files (x86)\Dude\dude.exe")
+                os.system("cls") or None
             if option == 3:
-                print('\033[91mAbrindo o UNM...')
+                print('Abrindo o UNM...')
                 sleep(0.5)
                 os.startfile("unm2000.exe")
+                os.system("cls") or None
             if option == 4:
-                print('[91mAbrindo Notepad...')
+                print('Abrindo Notepad...')
                 sleep(0.5)
-                os.startfile("notepad++.exe")
+                os.startfile("notepad.exe")
+                os.system("cls") or None
             if option == 5:
-                print('[91mAbrindo CMD...')
+                print('Abrindo CMD...')
                 sleep(0.5)
                 os.startfile("cmd.exe")
+                os.system("cls") or None
 
             if option == 6:
+                os.system("cls") or None
                 break
 
-    elif option == 2:
-        print('\033[93mVocê escolheu a opção de Bater Ponto')
-        print('\033[91mAbrindo Tangerino...\033[0m')
+
+    elif option == 2: #MenuPrincipal - Bater Ponto
+        print('Você escolheu a opção de Bater Ponto')
+        print('Abrindo Tangerino...')
         sleep(1)
         webbrowser.open_new_tab('https://app.tangerino.com.br/Tangerino/pages/baterPonto/?_ga=2.177181541.1714323212.1616620239-873285803.1616620239')
+        os.system("cls") or None
     elif option == 3: #Menu Principal
         while True:
             print('')
-            print('\033[1;97mPADRÕES DE ATENDIMENTOS\033[0m')
-            print("""\033[91m
+            print('Padrões/Fluxogramas')
+            print("""
 [1] Padrões de Atendimentos
 [2] Fluxogramas de Atendimentos (MIRO)
 [3] Voltar ao menu inicial
       """)
-            option = int(input('\033[92mDigite o valor da opção do sub-menu: \033[0m'))
+            option = int(input('Digite o valor da opção do sub-menu: '))
             if option == 1:
-                print('\033[93mRedirecionando...\033[0m')
+                print('Redirecionando...')
                 webbrowser.open_new_tab('https://docs.google.com/document/d/10eHZf_BZk223XuUWseMnpmAXwVT8tcvRdTxq7-zit-Q/edit')
                 sleep(0.5)
+                os.system("cls") or None
             elif option == 2:
                 print('Redirecionando...')
                 sleep(0.5)
+                os.system("cls") or None
             elif option == 3:
+                os.system("cls") or None
                 break
     elif option == 4:
-        print('')
-        print('\033[1;93mSegue Abaixo o Contato de todos os técnicos...')
-        print("""         
-\033[1;97m       
+        while True:
+            print('')
+            print('Contato dos Técnicos')
+            print("""\033[97m                
 ● Alexsander ---- 9 9517-5823
 ● Antonio ------- 9 9227-4296
 ● Cristiano ----- 9 9929-7221
@@ -116,80 +126,132 @@ while True:
 ● Rafael Fraga -- 9 7110-9506
 ● Ramon --------- 9 9741-8039
 ● Romário ------- 9 7152-8336
-\033[0m""")
-        print("""\033[33m
+    \033[0m""")
+            print("""
 [1] Menu Inicial
-[2] Sair do Programa\033[0m""")
-        print('')
-        option = int(input('\033[92mDigite o valor correspondente a opção que deseja: '))
-        if option == 1:
-            print('\033[91mVoltando...')
-            sleep(0.3)
-        elif option == 2:
-            break
+[2] Sair do Programa""")
+            print('')
+            option = int(input('Digite o valor correspondente a opção que deseja: '))
+            if option == 1:
+                print('Voltando...')
+                sleep(0.3)
+                os.system("cls") or None
+                break
+            elif option == 2:
+                os.system("cls") or None
+                sys.exit()
 
 
     elif option == 5:
-        print('Segue abaixo o contato dos técnicos ETI')
-        print("""\033[97m
-Felipe ----------- 9 9914-7380
-Adalberto -------- 9 9988-6761
-Diego ------------ 9 9415-1307
-Gilberto --------- 9 9926-1785
-Cristiano -------- 9 9543-3599
-Leandro ---------- 9 7555-0053
-Lucas ------------ 9 9544-1726
-Rafael Junior ---- 9 9953-2219
-Raffael Kluck ---- 9 9640-2175
-Maycon ----------- 9 9824-0862\033[0m""")
-        while not option == 1:
+        while True:
+            print('')
+            print('Contatos Técnicos ETI')
+            print("""\033[97m
+● Felipe ----------- 9 9914-7380
+● Adalberto -------- 9 9988-6761
+● Diego ------------ 9 9415-1307
+● Gilberto --------- 9 9926-1785
+● Cristiano -------- 9 9543-3599
+● Leandro ---------- 9 7555-0053
+● Lucas ------------ 9 9544-1726
+● Rafael Junior ---- 9 9953-2219
+● Raffael Kluck ---- 9 9640-2175
+● Maycon ----------- 9 9824-0862\033[0m""")
+            print('')
+
             print('[1] Menu Inicial')
             print('[2] Fechar Programa')
+            print('')
             option = int(input('Digite o valor correspondente a opção que deseja: '))
-            if option == 2:
+            if option == 1:
+                os.system("cls") or None
                 break
-
-
+            elif option == 2:
+                os.system("cls") or None
+                sys.exit()
 
 
     elif option == 6:
-        print('\033[93mPLANILHAS')
-        print('[1] Planilha de Escala')
-        print('[2] Planilha do ROT')
-        print('[3] Planilha de Ponto')
-        print('[4] Voltar ao menu Inicial')
-        print('[5] Fechar Programa')
-        option = int(input('\033[92mDigite o valor referente a opção que você deseja: '))
-        if option == 1:
-            print('Abrindo planilha de Escala Finais de Semana...')
-            sleep(0.5)
-            webbrowser.open_new_tab("https://drive.google.com/file/d/1q68tZnukZQehXfsxTtu0Nsht60aPh3qB/view")
-        elif option == 2:
-            print('Abrindo Planilha do ROT...')
-            sleep(0.5)
-            webbrowser.open_new_tab("https://docs.google.com/spreadsheets/d/1r5zO_JcHoUpxwLOzKa-sjldHNUwkjFJcvwcmsOeBlBw/edit#gid=1376975075")
-        elif option == 3:
-            print('Abrindo Planilha de Ponto...')
-            sleep(0.5)
-        elif option == 4:
-            print('\033[37mVoltando...')
-            sleep(0.5)
-        elif option == 5:
-            break
-        else:
-            sleep(0.5)
-            print('Opção Inválida, Tente Novamente!!!')
+        while True:
+            print('')
+            print('Planilhas')
+            print('')
+            print('[1] Planilha de Escala')
+            print('[2] Planilha do ROT')
+            print('[3] Planilha de Ponto')
+            print('[4] Menu Inicial')
+            print('[5] Fechar Programa')
+            print('')
+            option = int(input('Digite o valor referente a opção que você deseja: '))
+            if option == 1:
+                print('')
+                print('Abrindo Escala finais de semana...')
+                sleep(0.5)
+                webbrowser.open_new_tab("https://drive.google.com/file/d/1q68tZnukZQehXfsxTtu0Nsht60aPh3qB/view")
+                os.system("cls") or None
+            elif option == 2:
+                print('')
+                print('Abrindo Planilha do ROT...')
+                sleep(0.5)
+                webbrowser.open_new_tab("https://docs.google.com/spreadsheets/d/1r5zO_JcHoUpxwLOzKa-sjldHNUwkjFJcvwcmsOeBlBw/edit#gid=1376975075")
+                os.system("cls") or None
+            elif option == 3:
+                print('')
+                print('Abrindo Planilha de Ponto...')
+                sleep(0.5)
+                webbrowser.open_new_tab('')
+                os.system("cls") or None
+            elif option == 4:
+                print('')
+                print('Voltando...')
+                sleep(0.5)
+                os.system("cls") or None
+                break
+            elif option == 5:
+                os.system("cls") or None
+                sys.exit()
+            else:
+                sleep(0.5)
+                print('')
+                print('Opção Inválida, Tente Novamente!!!')
+                os.system("cls") or None
+
+
     elif option == 7:
-        print('Abrindo o site da WIKI...')
-        sleep(0.5)
-        print('WIKI SFOX')
-        webbrowser.open_new_tab("http://www.sfoxtelecom.com.br/wikisup/")
+        while True:
+            print('')
+            print("Wiki's")
+            print('''
+[1] Wiki Sfox
+[2] Wiki Sempre
+[3] Menu Inicial
+[4] Fechar Programa''')
+            print('')
+            option = int(input('Digite o valor referente a opção que você deseja: '))
+            if option == 1:
+                print('Abrindo Wiki Sfox')
+                sleep(0.5)
+                webbrowser.open_new_tab('http://www.sfoxtelecom.com.br/wikisup/')
+                os.system("cls") or None
+            elif option == 2:
+                print('Abrindo Wiki Sempre')
+                sleep(0.5)
+                webbrowser.open_new_tab(" ")
+                os.system("cls") or None
+            elif option == 3:
+                os.system("cls") or None
+                break
+            elif option == 4:
+                os.system("cls") or None
+                sys.exit()
+
+
     elif option == 8:
         while not option == 9:
             print('')
-            print("\033[93mSub-Menu sites para trabalho\033[0m")
+            print("Sites para trabalho")
             print('')
-            print('\033[1;34m[1] Bitrix24')
+            print('[1] Bitrix24')
             print('[2] Hubsoft')
             print('[3] Grafana')
             print('[4] Zabbix')
@@ -198,91 +260,119 @@ Maycon ----------- 9 9824-0862\033[0m""")
             print('[7] Sankhya')
             print('[8] Newave')
             print('[9] Voltar ao menu inicial')
-            print('[10] Fechar Programa\033[0m')
+            print('[10] Fechar Programa')
             print('')
 
-            option = int(input("\033[97mDigite o valor referente a opção que você deseja: "))
+            option = int(input("Digite o valor referente a opção que você deseja: "))
             if option == 1:
-                print('' *1000000)
                 print('Abrindo o Bitrix24...')
                 sleep(0.5)
                 webbrowser.open_new_tab("https://sfoxtelecom.bitrix24.com.br/stream/")
+                os.system("cls") or None
             elif option == 2:
                 print('Abrindo o Hubsoft...')
                 sleep(0.5)
                 webbrowser.open_new_tab("https://sfox.hubsoft.com.br/atendimento_os/atendimento")
+                os.system("cls") or None
             elif option == 3:
                 print('Abrindo Grafana...')
                 sleep(0.5)
                 webbrowser.open_new_tab("")
+                os.system("cls") or None
             elif option == 4:
                 print('Abrindo Zabbix...')
                 sleep(0.5)
                 webbrowser.open_new_tab("")
+                os.system("cls") or None
             elif option == 5:
                 print('Abrindo Webmail...')
                 sleep(0.5)
                 webbrowser.open_new_tab("https://webmail.sfox.net.br/")
+                os.system("cls") or None
             elif option == 6:
                 print('Abrindo site de Geração de O.S...')
                 sleep(0.5)
                 webbrowser.open_new_tab("http://sfox.net.br/app/sempreOS/#/login")
+                os.system("cls") or None
             elif option == 7:
                 print('Abrindo o Sankhya...')
                 sleep(0.5)
                 webbrowser.open_new_tab("http://187.109.10.86:8080/mge/login.jsp?expired=true")
+                os.system("cls") or None
             elif option == 8:
                 print('Abrindo o NeWave...')
                 sleep(0.5)
                 webbrowser.open_new_tab("http://192.140.108.82/#/monitor")
+                os.system("cls") or None
             elif option == 9:
                 print('Voltando...')
                 sleep(0.5)
+                os.system("cls") or None
             elif option == 10:
-                break
+                os.system("cls") or None
+                sys.exit()
+
+
+
     elif option == 9:
-        while not option == 3:
-            print('[1] Números dos Setores')
+        while True:
+            print('')
+            print('Setores')
+            print('')
+            print('[1] Contatos dos Setores')
             print('[2] Códigos para transferência de filas')
             print('[3] Voltar pro menu inicial')
             print('[4] Fechar programa')
-
+            print('')
             option = int(input('Digite o valor referente a opção que você deseja: '))
+            os.system("cls") or None
             if option == 1:
-                print('\033[93mSegue abaixo o Número de Telefone dos Setores')
+                print('')
+                print('Contatos dos outros setores')
                 print('''\033[97m
-Comercial Residencial - 3058-2801
-Comercial Empresarial - 3058-0099
-Atendimento Financeiro - 3058-0010
-Agendamento/Logística - 3058-0070
-Suporte  Residencial - 3058-2800
-Técnico Residencial - 3058-0060
-Suporte Empresarial - 3058-0100
-Whatsapp - 31 9 8302-9179
-Central - 0800-940-3005\033[0m''')
+● Comercial Residencial - 3058-2801
+● Comercial Empresarial - 3058-0099
+● Atendimento Financeiro - 3058-0010
+● Agendamento/Logística - 3058-0070
+● Suporte  Residencial - 3058-2800
+● Técnico Residencial - 3058-0060
+● Suporte Empresarial - 3058-0100
+● Whatsapp - 31 9 8302-9179
+● Central - 0800-940-3005\033[0m''')
+                print('')
             elif option == 2:
-                print('\033[93mSegue abaixo o Código para transferir o cliente para a fila direto nos ramais')
-                print('''\033[0m
-Agendamento -- #4000#
-Comercial -- #3400#
-Financeiro -- #3000#
-Empresarial -- #6800#\033[97m''')
+                print('')
+                print('Códigos para transferir ramal direto')
+                print('')
+                print('''\033[97m
+● Agendamento -- #4000#
+● Comercial -- #3400#
+● Financeiro -- #3000#
+● Empresarial -- #6800#\033[0m''')
+                print('')
+            elif option == 3:
+                os.system("cls") or None
+                break
             elif option == 4:
+                os.system("cls") or None
                 sys.exit()
 
+
             else:
-                print('\033[91mOpção Inválida, Tente Novamente!!!\033[0m')
+                print('')
+                print('Opção Inválida, Tente Novamente!!!')
+                os.system("cls") or None
 
 
 
     elif option == 10:
-        break
+        os.system("cls") or None
+        sys.exit()
 
     else:
         print('')
-        print('\033[91mOpção inválida, Tente Novamente!!!\033[0m')
+        print('Opção inválida, Tente Novamente!!!')
+        os.system("cls") or None
 else:
-    print('\033[91mOpção Inválida. Tente Novamente!!!')
-
-
-
+    print('Opção Inválida. Tente Novamente!!!')
+    os.system("cls") or None
